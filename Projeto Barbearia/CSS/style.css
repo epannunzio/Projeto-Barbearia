@@ -1,0 +1,246 @@
+body {
+	font-family: 'EB Garamond', serif;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px; /* pra cima direita pra baixo esquerda */
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover { /*quando o mouse passar pelos links (a) dentro da nav apenas */
+	color: rgb(238, 255, 5);
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%; /*é oque centralizou tudo certinho */
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #000;
+	border-radius: 30px;
+}
+
+.produtos li:hover { /*quando passar o mouse sobre */
+	border-color: brown;
+}
+
+.produtos li:active { /*quando o mouse for clicado */
+	border-color: yellow;
+}
+
+.produtos li:hover h2 { 
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao { /*sempre que possivel, colocar as classes na ordem que estão no html*/
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url(../img/textura-preta-footer.jpg);
+	padding: 40px 0;
+}
+
+.copyright {
+	color: white;
+	font-size: 13px;
+	margin-top: 20px;
+}
+
+form {
+	margin: 40px 0;
+}
+
+form label, form legend {
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px; /*forma geral*/
+}
+
+.input-padrao {
+	display: block;
+	margin-bottom: 20px; /*forma especifica*/
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+/* css da página inicial */
+.banner {
+    width:100%;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left; /* ele limpa o float usado deixando alinhado */
+	color: rgba(0, 0, 0, 0.774);
+	text-shadow: 2px 2px rgb(129, 9, 9);
+}
+
+.titulo-principal:before {
+	content: "*";
+}
+
+.titulo-principal:after{
+	content: "*";
+}
+
+.principal {
+	padding: 3em 0;
+	background: #fff;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#fff, #888);
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888;
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 1.5;
+}
+
+.itens:before {
+	content:"★";
+}
+
+.itens:first-child { /*estilizamos o primeiro item da lista*/
+	font-weight: bold;
+}
+
+.imagem-beneficios {
+    width: 60%;
+	opacity: 0.6; /*deixa a imagem opaca em 30% */
+	transition: 500ms;  /* deixa a opacidade com uma demora até aparecer */
+	box-shadow: 10px 10px 20px black;
+}
+
+.imagem-beneficios:hover {
+	opacity: 1;  /* quando passar o mouse por cima mostra 100% da cor da imagem */
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto;
+}
+
+/* media querie */
+@media screen and (max-width: 480px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+	}
+
+	.lista-beneficios, .imagem-beneficios {
+		width: 100%;
+	}
+
+	.lista-beneficios {
+		padding-bottom: 20px;
+	}
+}
